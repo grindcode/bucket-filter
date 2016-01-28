@@ -6,8 +6,8 @@ module.exports = function (data, filters, self) {
       if ('function' !== typeof filter.condition) throw new TypeError
       if (!filter.condition.call(self, value)) return false
       if (!filter.limit) return true
-      if ('number' !== typeof filter.limit) throw new TypeError
       var concurrency = res.filter(filter.condition, self).length
+      if ('number' !== typeof filter.limit) throw new TypeError
       return concurrency < filter.limit
     })
     return (eligible)? res.concat(value): res
