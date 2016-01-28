@@ -12,7 +12,7 @@ npm install bucket-filter
 ### filter(array, callbacks[, thisArg])
 Returns new _Array_ containing values filtered by `callbacks`.
 * `array`: Array to filter. (**Array**)
-* `conditions`: Array of functions to be evaluated: (**Array**)
+* `callbacks`: Array of functions to be evaluated: (**Array**)
   * `condition` Condition evaluation returning boolean (**Function**)
   * `limit`: Optional. Condition results limit (**Number**)
 * `thisArg`: Optional. Value to use as _this_ when executing `callback`.
