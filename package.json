@@ -1,0 +1,32 @@
+{
+  "name": "bucket-filter",
+  "version": "0.1.0",
+  "description": "Array filtering allowing multiple conditions and concurrency limit.",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grindcode/bucket-filter.git"
+  },
+  "keywords": [
+    "array",
+    "browserify",
+    "filter",
+    "browser",
+    "reduce",
+    "bucket",
+    "limit"
+  ],
+  "author": "Isis T. Baulig",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/grindcode/bucket-filter/issues"
+  },
+  "homepage": "https://github.com/grindcode/bucket-filter#readme",
+  "devDependencies": {
+    "tape": "^4.4.0"
+  },
+  "dependencies": {}
+}
