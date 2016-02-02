@@ -4,7 +4,7 @@
 Array filtering allowing multiple conditions and concurrency limit.
 
 ## Get Started
-```bash
+```shell
 npm install bucket-filter
 ```
 
@@ -39,6 +39,18 @@ var conditions = [
 
 filter(data, conditions)
 // → []
+```
+
+## Benchmark
+```shell
+node benchmark.js
+```
+
+### Results
+```shell
+10x array / 1x filter x 271,122 ops/sec ±1.00% (85 runs sampled)
+10x array / 2x filter x 199,617 ops/sec ±1.25% (84 runs sampled)
+10x array / 5x filter x 78,228 ops/sec ±0.91% (78 runs sampled)
 ```
 
 ## License
