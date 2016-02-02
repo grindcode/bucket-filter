@@ -16,9 +16,24 @@ var data = [
 ]
 
 Suite
-  .add('10x array / 1x filter', function () {
+  .add('10x array / 1x callback', function () {
     filter(data, [
       { condition: function (i) { return i.type === 1 }, limit: 2 }
+    ])
+  })
+  .add('10x array / 2x callbacks', function () {
+    filter(data, [
+      { condition: function (i) { return i.type === 1 }, limit: 2 },
+      { condition: function (i) { return i.type === 1 }, limit: 3 }
+    ])
+  })
+  .add('10x array / 5x callbacks', function () {
+    filter(data, [
+      { condition: function (i) { return i.type === 1 }, limit: 2 },
+      { condition: function (i) { return i.type === 2 }, limit: 2 },
+      { condition: function (i) { return i.type === 3 }, limit: 1 },
+      { condition: function (i) { return i.type === 4 }, limit: 2 },
+      { condition: function (i) { return i.type === 5 }, limit: 1 }
     ])
   })
   .on('cycle', function (e) {
