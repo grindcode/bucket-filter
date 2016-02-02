@@ -1,6 +1,6 @@
 {
   "name": "bucket-filter",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Array filtering allowing multiple conditions and concurrency limit.",
   "main": "index.js",
   "scripts": {
@@ -17,7 +17,14 @@
     "browser",
     "reduce",
     "bucket",
-    "limit"
+    "limit",
+    "sort",
+    "filter",
+    "conditions",
+    "immutable",
+    "capacity",
+    "object",
+    "declarative"
   ],
   "author": "Isis T. Baulig",
   "license": "MIT",
