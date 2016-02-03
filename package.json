@@ -36,5 +36,7 @@
     "benchmark": "^2.1.0",
     "tape": "^4.4.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "fast.js": "^0.1.1"
+  }
 }

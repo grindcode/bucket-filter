@@ -48,9 +48,9 @@ node benchmark.js
 
 ### Results
 ```shell
-10x array / 1x filter x 271,122 ops/sec ±1.00% (85 runs sampled)
-10x array / 2x filter x 199,617 ops/sec ±1.25% (84 runs sampled)
-10x array / 5x filter x 78,228 ops/sec ±0.91% (78 runs sampled)
+10x array / 1x callback x 660,885 ops/sec ±1.88% (81 runs sampled)
+10x array / 2x callbacks x 474,259 ops/sec ±3.27% (73 runs sampled)
+10x array / 5x callbacks x 222,545 ops/sec ±1.23% (77 runs sampled)
 ```
 
 ## License
