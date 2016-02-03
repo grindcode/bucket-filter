@@ -1,5 +1,5 @@
 module.exports = function (data, filters, self) {
-  if (void 0 === data || null === data)
+  if (!Array.isArray(data))
     throw new TypeError('First argument invalid. Expected Array.')
   if (!Array.isArray(filters)) return data
   return data.reduce(function (res, value) {
