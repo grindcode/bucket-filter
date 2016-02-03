@@ -1,6 +1,6 @@
 {
   "name": "bucket-filter",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Array filtering allowing multiple conditions and concurrency limit.",
   "main": "index.js",
   "scripts": {
