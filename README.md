@@ -1,7 +1,7 @@
 # Bucket Filter
 [![Build Status](https://travis-ci.org/grindcode/bucket-filter.svg?branch=master)](https://travis-ci.org/grindcode/bucket-filter) [![Dependency Status](https://david-dm.org/grindcode/bucket-filter.svg)](https://david-dm.org/grindcode/bucket-filter) [![devDependency Status](https://david-dm.org/grindcode/bucket-filter/dev-status.svg)](https://david-dm.org/grindcode/bucket-filter#info=devDependencies)
 
-Array filtering using buckets. Allows multiple conditions and size limit. Keeps the original order.
+Array filtering using buckets. Allows infinite buckets, bucket size limit, keeps input order and discards unmatched elements.
 
 ## Get Started
 ```shell
@@ -12,9 +12,9 @@ npm install bucket-filter
 ### filter(array, callbacks[, thisArg])
 Returns new _Array_ containing values filtered by `buckets`.
 * `array`: Array input. (**Array**)
-* `buckets`: Array of buckets to use as filters: (**Array**)
-  * `condition`: Condition evaluating bucket selection. Return boolean. (**Function**)
-  * `limit`: Optional. Condition results limit. (**Number**)
+* `buckets`: Array of buckets: (**Array**)
+  * `condition`: Evaluates bucket selection. Return boolean. (**Function**)
+  * `limit`: Optional. Bucket size limit. (**Number**)
 * `thisArg`: Optional. Value to use as _this_ when executing each `condition`. (**Mixed**)
 
 ### Usage

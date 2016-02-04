@@ -1,7 +1,7 @@
 {
   "name": "bucket-filter",
   "version": "0.1.2",
-  "description": "Array filtering allowing multiple conditions and concurrency limit.",
+  "description": "Array filtering using buckets. Allows infinite buckets, bucket size limit, keeps input order and discards unmatched elements.",
   "main": "index.js",
   "scripts": {
     "test": "tape test/*.js"
@@ -19,12 +19,17 @@
     "bucket",
     "limit",
     "sort",
-    "filter",
+    "filtering",
     "conditions",
     "immutable",
     "capacity",
     "object",
-    "declarative"
+    "declarative",
+    "unmatched",
+    "input",
+    "elements",
+    "size",
+    "infinite"
   ],
   "author": "Isis T. Baulig",
   "license": "MIT",
