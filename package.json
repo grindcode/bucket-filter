@@ -1,6 +1,6 @@
 {
   "name": "bucket-filter",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Array filtering using buckets. Allows infinite buckets, bucket size limit, keeps input order and discards unmatched elements.",
   "main": "index.js",
   "scripts": {
@@ -19,6 +19,10 @@
     "bucket",
     "limit",
     "sort",
+    "lodash",
+    "match",
+    "search",
+    "length",
     "filtering",
     "conditions",
     "immutable",
