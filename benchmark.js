@@ -16,18 +16,18 @@ var data = [
 ]
 
 Suite
-  .add('10x array / 1x callback', function () {
+  .add('10x array / 1x bucket', function () {
     filter(data, [
       { condition: function (i) { return i.type === 1 }, limit: 2 }
     ])
   })
-  .add('10x array / 2x callbacks', function () {
+  .add('10x array / 2x buckets', function () {
     filter(data, [
       { condition: function (i) { return i.type === 1 }, limit: 2 },
       { condition: function (i) { return i.type === 1 }, limit: 3 }
     ])
   })
-  .add('10x array / 5x callbacks', function () {
+  .add('10x array / 5x buckets', function () {
     filter(data, [
       { condition: function (i) { return i.type === 1 }, limit: 2 },
       { condition: function (i) { return i.type === 2 }, limit: 2 },

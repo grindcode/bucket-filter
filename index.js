@@ -7,14 +7,14 @@ module.exports = function (data, filters, self) {
   return fast.reduce(data, function (res, value) {
     var eligible = fast.some(filters, function (filter) {
       if ('function' !== typeof filter.condition)
-        throw new TypeError('Callback condition argument invalid. Expected function.')
+        throw new TypeError('Bucket condition argument invalid. Expected function.')
       if (!filter.condition.call(self, value))
         return false
       if (!filter.limit)
         return true
       var concurrency = fast.filter(res, filter.condition, self).length
       if ('number' !== typeof filter.limit)
-        throw new TypeError('Callback limit argument invalid. Expected number or undefined.')
+        throw new TypeError('Bucket limit argument invalid. Expected number or undefined.')
       return concurrency < filter.limit
     })
     return (eligible)? fast.concat(res, value): res

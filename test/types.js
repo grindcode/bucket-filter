@@ -24,22 +24,22 @@ test('input argument invalid', function (t) {
 
 test('callback condition invalid', function (t) {
   t.plan(1)
-  var conditions = [
+  var buckets = [
     { condition: 'this is not a function', limit: 2 }
   ]
   t.throws(function () {
-    filter(data, conditions)
+    filter(data, buckets)
   })
   t.end()
 })
 
 test('callback limit invalid', function (t) {
   t.plan(1)
-  var conditions = [
+  var buckets = [
     { condition: function (i) { return i.type === 2 }, limit: 'this is not a number' }
   ]
   t.throws(function () {
-    filter(data, conditions)
+    filter(data, buckets)
   })
   t.end()
 })
