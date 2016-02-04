@@ -15,7 +15,7 @@ Returns new _Array_ containing values filtered by `buckets`.
 * `buckets`: Array of buckets: (**Array**)
   * `condition`: Evaluates bucket selection. Return boolean. (**Function**)
   * `limit`: Optional. Bucket size limit. (**Number**)
-* `this`: Optional. Value to use as _this_ when executing each `condition`. (**Mixed**)
+* `this`: Optional. Value of _this_ when executing each bucket `condition`. (**Mixed**)
 
 ### Usage
 ```javascript
