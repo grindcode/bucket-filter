@@ -1,5 +1,4 @@
 var reduce = require('lodash.reduce')
-var isArray = require('lodash.isArray')
 var filter = require('lodash.filter')
 var some = require('lodash.some')
 var concat = require('lodash.concat')
@@ -12,9 +11,9 @@ var concat = require('lodash.concat')
  * @returns {Array} Resulting array.
  */
 module.exports = function (input, buckets, self) {
-  if (!isArray(input))
+  if (!Array.isArray(input))
     throw new TypeError('First argument invalid. Expected Array.')
-  if (!isArray(buckets))
+  if (!Array.isArray(buckets))
     return input
   return reduce(input, function (output, value) {
     var eligible = some(buckets, function (bucket) {
