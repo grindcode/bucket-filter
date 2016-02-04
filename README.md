@@ -9,13 +9,13 @@ npm install bucket-filter
 ```
 
 ## API
-### filter(array, callbacks[, thisArg])
+### filter(input, buckets[, this])
 Returns new _Array_ containing values filtered by `buckets`.
-* `array`: Array input. (**Array**)
+* `input`: Array input. (**Array**)
 * `buckets`: Array of buckets: (**Array**)
   * `condition`: Evaluates bucket selection. Return boolean. (**Function**)
   * `limit`: Optional. Bucket size limit. (**Number**)
-* `thisArg`: Optional. Value to use as _this_ when executing each `condition`. (**Mixed**)
+* `this`: Optional. Value to use as _this_ when executing each `condition`. (**Mixed**)
 
 ### Usage
 ```javascript

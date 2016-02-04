@@ -1,22 +1,21 @@
 var fast = require('fast.js')
-module.exports = function (data, filters, self) {
-  if (!Array.isArray(data))
+module.exports = function (input, buckets, self) {
+  if (!Array.isArray(input))
     throw new TypeError('First argument invalid. Expected Array.')
-  if (!Array.isArray(filters))
-    return data
-  return fast.reduce(data, function (res, value) {
-    var eligible = fast.some(filters, function (filter) {
-      if ('function' !== typeof filter.condition)
+  if (!Array.isArray(buckets))
+    return input
+  return fast.reduce(input, function (output, value) {
+    var eligible = fast.some(buckets, function (bucket) {
+      if ('function' !== typeof bucket.condition)
         throw new TypeError('Bucket condition argument invalid. Expected function.')
-      if (!filter.condition.call(self, value))
+      if (!bucket.condition.call(self, value))
         return false
-      if (!filter.limit)
+      if (!bucket.limit)
         return true
-      var concurrency = fast.filter(res, filter.condition, self).length
-      if ('number' !== typeof filter.limit)
+      if ('number' !== typeof bucket.limit)
         throw new TypeError('Bucket limit argument invalid. Expected number or undefined.')
-      return concurrency < filter.limit
+      return fast.filter(output, bucket.condition, self).length < bucket.limit
     })
-    return (eligible)? fast.concat(res, value): res
+    return (eligible)? fast.concat(output, value): output
   }, [])
 }

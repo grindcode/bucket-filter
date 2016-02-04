@@ -22,7 +22,7 @@ test('input argument invalid', function (t) {
   t.end()
 })
 
-test('callback condition invalid', function (t) {
+test('bucket condition invalid', function (t) {
   t.plan(1)
   var buckets = [
     { condition: 'this is not a function', limit: 2 }
@@ -33,7 +33,7 @@ test('callback condition invalid', function (t) {
   t.end()
 })
 
-test('callback limit invalid', function (t) {
+test('bucket size limit invalid', function (t) {
   t.plan(1)
   var buckets = [
     { condition: function (i) { return i.type === 2 }, limit: 'this is not a number' }
