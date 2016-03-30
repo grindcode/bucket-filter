@@ -44,6 +44,7 @@
   "devDependencies": {
     "benchmark": "^2.1.0",
     "coveralls": "^2.11.9",
+    "nyc": "^6.1.1",
     "tape": "^4.5.1"
   },
   "dependencies": {
