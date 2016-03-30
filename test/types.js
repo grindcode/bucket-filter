@@ -43,3 +43,10 @@ test('bucket size limit invalid', function (t) {
   })
   t.end()
 })
+
+test('buckets argument invalid', function (t) {
+  t.plan(1)
+  var result = filter(data)
+  t.deepEqual(result, data);
+  t.end()
+})
