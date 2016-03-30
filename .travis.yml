@@ -13,5 +13,3 @@ node_js:
 branches:
   only:
   - master
-after_script:
-  - codeclimate-test-reporter < lcov.info
