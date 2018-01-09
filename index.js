@@ -1,8 +1,3 @@
-var reduce = require('lodash.reduce')
-var filter = require('lodash.filter')
-var some = require('lodash.some')
-var concat = require('lodash.concat')
-
 /**
  * Array filtering using buckets.
  * @param {Array} input - Array input.
@@ -15,8 +10,8 @@ module.exports = function (input, buckets, self) {
     throw new TypeError('First argument invalid. Expected Array.')
   if (!Array.isArray(buckets))
     return input
-  return reduce(input, function (output, value) {
-    var eligible = some(buckets, function (bucket) {
+  return input.reduce(function (output, value) {
+    var eligible = buckets.some(function (bucket) {
       if ('function' !== typeof bucket.condition)
         throw new TypeError(
           'Bucket condition argument invalid. Expected function.')
@@ -27,8 +22,8 @@ module.exports = function (input, buckets, self) {
       if ('number' !== typeof bucket.limit)
         throw new TypeError(
           'Bucket limit argument invalid. Expected number or undefined.')
-      return filter(output, bucket.condition, self).length < bucket.limit
+      return output.filter(bucket.condition, self).length < bucket.limit
     })
-    return (eligible)? concat(output, value): output
+    return (eligible)? output.concat(value): output
   }, [])
 }

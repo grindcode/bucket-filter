@@ -48,9 +48,9 @@ node benchmark.js
 
 ### Results
 ```shell
-10x array / 1x bucket x 589,899 ops/sec ±0.79% (87 runs sampled)
-10x array / 2x buckets x 414,027 ops/sec ±1.80% (81 runs sampled)
-10x array / 5x buckets x 175,405 ops/sec ±1.50% (79 runs sampled)
+10x array / 1x bucket x 363,791 ops/sec ±1.44% (86 runs sampled)
+10x array / 2x buckets x 255,432 ops/sec ±0.93% (84 runs sampled)
+10x array / 5x buckets x 133,518 ops/sec ±1.07% (83 runs sampled)
 ```
 
 ## License
