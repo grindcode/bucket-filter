@@ -1,5 +1,5 @@
 # Bucket Filter
-[![Build Status](https://travis-ci.org/grindcode/bucket-filter.svg?branch=master)](https://travis-ci.org/grindcode/bucket-filter) [![Test Coverage](https://codeclimate.com/github/grindcode/bucket-filter/badges/coverage.svg)](https://codeclimate.com/github/grindcode/bucket-filter/coverage) [![Dependency Status](https://david-dm.org/grindcode/bucket-filter.svg)](https://david-dm.org/grindcode/bucket-filter) [![devDependency Status](https://david-dm.org/grindcode/bucket-filter/dev-status.svg)](https://david-dm.org/grindcode/bucket-filter#info=devDependencies)
+[![Build Status](https://travis-ci.org/grindcode/bucket-filter.svg?branch=master)](https://travis-ci.org/grindcode/bucket-filter) [![Dependency Status](https://david-dm.org/grindcode/bucket-filter.svg)](https://david-dm.org/grindcode/bucket-filter) [![devDependency Status](https://david-dm.org/grindcode/bucket-filter/dev-status.svg)](https://david-dm.org/grindcode/bucket-filter#info=devDependencies)
 
 Array filtering using buckets. Allows infinite buckets, bucket size limit, keeps input order and discards unmatched elements.
 
@@ -48,9 +48,9 @@ node benchmark.js
 
 ### Results
 ```shell
-10x array / 1x bucket x 363,791 ops/sec ±1.44% (86 runs sampled)
-10x array / 2x buckets x 255,432 ops/sec ±0.93% (84 runs sampled)
-10x array / 5x buckets x 133,518 ops/sec ±1.07% (83 runs sampled)
+10x array / 1x bucket x 787,188 ops/sec ±7.22% (75 runs sampled)
+10x array / 2x buckets x 586,677 ops/sec ±0.67% (87 runs sampled)
+10x array / 5x buckets x 255,597 ops/sec ±1.06% (89 runs sampled)
 ```
 
 ## License

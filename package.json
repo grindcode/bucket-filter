@@ -4,8 +4,7 @@
   "description": "Array filtering using buckets. Allows infinite buckets, bucket size limit, keeps input order and discards unmatched elements.",
   "main": "index.js",
   "scripts": {
-    "test": "tape test/*.js",
-    "report": "nyc tape test/*.js && nyc report --reporter=text-lcov | codeclimate-test-reporter"
+    "test": "tape test/*.js"
   },
   "repository": {
     "type": "git",
@@ -43,10 +42,8 @@
   },
   "homepage": "https://github.com/grindcode/bucket-filter#readme",
   "devDependencies": {
-    "benchmark": "^2.1.0",
-    "codeclimate-test-reporter": "^0.5.0",
-    "nyc": "^11.0.1",
-    "tape": "^4.5.1"
+    "benchmark": "^2.1.4",
+    "tape": "^5.0.1"
   },
   "dependencies": {}
 }

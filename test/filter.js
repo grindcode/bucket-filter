@@ -19,13 +19,13 @@ test('filter', function (t) {
   var result = filter(data, [
     { condition: function (i) { return i.type === 1 }, limit: 2 },
     { condition: function (i) { return i.type === 2 }, limit: 1 },
-    { condition: function (i) { return i.type === 4 }}
+    { condition: function (i) { return i.type === 4 } }
   ])
   t.deepEqual(result, [
     { type: 1, title: 'foo-1-1' },
     { type: 1, title: 'foo-1-2' },
     { type: 2, title: 'foo-2-1' },
     { type: 4, title: 'foo-4-1' }
-  ]);
+  ])
   t.end()
 })

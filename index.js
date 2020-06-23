@@ -6,24 +6,30 @@
  * @returns {Array} Resulting array.
  */
 module.exports = function (input, buckets, self) {
-  if (!Array.isArray(input))
+  if (!Array.isArray(input)) {
     throw new TypeError('First argument invalid. Expected Array.')
-  if (!Array.isArray(buckets))
+  }
+  if (!Array.isArray(buckets)) {
     return input
-  return input.reduce(function (output, value) {
-    var eligible = buckets.some(function (bucket) {
-      if ('function' !== typeof bucket.condition)
+  }
+  return input.reduce((output, value) => {
+    const eligible = buckets.some(bucket => {
+      if (typeof bucket.condition !== 'function') {
         throw new TypeError(
           'Bucket condition argument invalid. Expected function.')
-      if (!bucket.condition.call(self, value))
+      }
+      if (!bucket.condition.call(self, value)) {
         return false
-      if (!bucket.limit)
+      }
+      if (!bucket.limit) {
         return true
-      if ('number' !== typeof bucket.limit)
+      }
+      if (typeof bucket.limit !== 'number') {
         throw new TypeError(
           'Bucket limit argument invalid. Expected number or undefined.')
+      }
       return output.filter(bucket.condition, self).length < bucket.limit
     })
-    return (eligible)? output.concat(value): output
+    return eligible ? output.concat(value) : output
   }, [])
 }

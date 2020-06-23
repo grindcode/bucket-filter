@@ -1,5 +1,5 @@
 var Benchmark = require('benchmark')
-var Suite = new Benchmark.Suite
+var Suite = new Benchmark.Suite()
 var filter = require('./index.js')
 
 var data = [
